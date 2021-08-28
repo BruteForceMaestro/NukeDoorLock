@@ -7,7 +7,7 @@ namespace NukeDoorLock
     {
         public void InteractingDoor(InteractingDoorEventArgs ev)
         {
-            if (ev.Door.Type == DoorType.NukeSurface)
+            if (ev.Door.Type == DoorType.NukeSurface && ev.IsAllowed)
             {
                 ev.Door.DoorLockType = DoorLockType.AdminCommand;
             }
